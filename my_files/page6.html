@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="myscript.js"></script>
+    <title>Choco Mania</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css ">
+    </head>
+    <body>
+ <div class=" image ">
+        <div class=" header ">
+            <div class=" logo ">
+                    <a href=" loggedIn.php ">
+                     <img src=" logo.png ">
+
+                     </a>
+            </div>
+
+         <div class=" rows " >
+          <div class="footer ">
+
+            <a href="reviews.html ">Reviews </a>
+    </div>
+            <div class=" footer ">
+                    <a href=" page3.html " >Categories </a>
+
+            </div>
+
+            <div class=" footer ">
+                    <a href=" page8.php " > My Orders </a>
+            </div>
+            <div class="footer">
+              <a href="logout.php ">Logout
+              </a>
+              </div>
+
+        </div>
+    </div>
+    <form  action="phppage6.php" method="POST" onsubmit="success()" >
+
+    <div class=" registerbg ">
+        <div class=" row3 ">
+
+            <div class =" cakes ">
+
+                <h1>Strawberry</h1><br><br>
+                <img src="cupcake1.jpg " >
+                <br><br><br> <label class ="container"> Strawberry Cupcake
+                            <br><br><h1>2$</h1>
+                            <input type="checkbox" id="check1">
+                             <span class ="checkmark"> </span>
+                        </label>
+                        <input type="number" id="cupcake1" name="cupcake1"  min="0" max="5" value="0" onchange="TotalCost2()"/>
+            </div>
+                        <div class =" cakes ">
+                        <h1>Nutella</h1><br><br>
+                        <img src="cupcake2.jpg " >
+                                <br><br><br><label class ="container"> Nutella Cupcake
+                                    <br><br><h1>2$</h1>
+                                    <input type="checkbox" id="check2" >
+                                     <span class ="checkmark"> </span>
+                                </label>
+                                <input type="number" id="cupcake2" name="cupcake2"  min="0" max="5" value="0" onchange="TotalCost2()"/>
+                        </div>
+                                <div class =" cakes ">
+                                <h1>Caramel</h1><br><br>
+                                <img src="cupcake3.jpeg " >
+                                <br><br><br>  <label class ="container"> Caramel  Cupcake
+                                            <br><br><h1>2$</h1>
+                                            <input type="checkbox" id="check3">
+                                             <span class ="checkmark"> </span>
+                                        </label>
+                                        <input type="number" id="cupcake3" name="cupcake3" min="0" max="5" value="0"onchange="TotalCost2()"/>
+                                </div>
+                                <div class="test2">
+                                    <button class="button " type="button" onclick="unselect()">Unselect </button>
+                               </div>
+                               <div class="test">
+                                <button class="button " type="button" onclick="select()">select </button>
+                           </div>
+
+
+
+
+        </div>
+
+        <div class=" row3 ">
+
+    <div class =" cakes ">
+        <h1>Lemon</h1><br><br>
+        <img src="cupcake4.jpg " >
+        <br><br><br><label class ="container"> Lemon Cupcake
+                    <br><br><h1>2$</h1>
+                    <input type="checkbox" id="check4">
+                     <span class ="checkmark"> </span>
+                </label>
+                <input type="number" id="cupcake4" name="cupcake4" min="0" max="5" value="0"onchange="TotalCost2()"/>
+    </div>
+                <div class =" cakes ">
+                    <h1>Oreo</h1><br><br>
+                    <img src="cupcake5.jpg " >
+                    <br><br><br><label class ="container"> Oreo Cupcake
+                                <br><br><h1>2$</h1>
+                                <input type="checkbox" id="check5">
+                                 <span class ="checkmark"> </span>
+                            </label>
+                            <input type="number" id="cupcake5" name="cupcake5"  min="0" max="5" value="0"onchange="TotalCost2()"/>
+                </div>
+                            <div class =" cakes ">
+                                <h1>Bueno</h1><br><br>
+                                <img src="cupcake6.jpg " >
+                                <br><br><br><label class ="container"> Bueno Cupcake<br>
+                                            <br><h1>2$</h1>
+                                            <input type="checkbox" id="check6">
+                                             <span class ="checkmark"> </span>
+                                        </label>
+                                        <input type="number" id="cupcake6" name="cupcake6" min="0" max="5" value="0"onchange="TotalCost2()"/>
+
+            </div>
+            <div class="test2">
+              <button class="button " type="button" onclick="RNG2()">Random </button><br>
+         </div>
+
+            <div class="test">
+                 <button class="button " id="myBtn" type="button" onclick="step2();" >Next </button><br>
+            </div>
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2>Shipping To:</h2>
+                  </div>
+
+                        <br><br>
+                        Address:<br>
+                        <input type="text" id="address" name="address" required>
+                        <br><br> Number:<br>
+                        <input type="number" id="number"  name="number" required>
+                        <br><br>Postal Code:<br>
+                        <input type="number" id="post" min="0" max="99999"  name="post" required>
+                        <br><br> Region:<br>
+                        <input type="text" id="region" name="region" required>
+                        <br><br>Phone Number:<br>
+                        <input type="number" id="phone" name="phone" pattern=".{10}" title="must contain 10 numbers" required><br><br><br>
+                        <h5>Extra details:</h5><br>
+                        <textarea id="details" name="details" rows="4" cols="40"></textarea><br><br>
+                        <h6> Express: +6$<input type="checkbox" name="express" id="expr"onchange="TotalCost2();" ></h6><br>
+
+
+
+                  <div class="modal-footer">
+                    <span class="close2">
+                    <button class="button " type="button" id="myBtn" onclick="step1()">Previous</button>
+                </span>
+                    <span class="close">
+                    <button class="button " type="submit" name="submit1" id="nextBtn" onclick="step3();">Next</button>
+                </span>
+                      </div>
+                </div>
+
+              </div>
+
+
+              <div id="myModal2" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2>Payment Option:</h2>
+                  </div>
+
+                        <br><br><br>
+                        <h1>Choose your payment Option:</h1><br><br><br>
+                        <br><select  id="selectBoxx" name="selectBox"  required>
+                            <option  selected="selected"></option>
+                            <option >pay on delivery</option>
+                            <option   >card</option>
+                            </select>
+
+
+                  <div class="modal-footer">
+                      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <span class="close2">
+                    <button class="button " type="button" id="myBtn" onclick="step2()">Previous</button>
+                </span>
+                    <span class="close">
+                    <button class="button " type="button" id="nextBtn2" onclick="step4();">Next</button>
+                </span>
+                      </div>
+                </div>
+
+              </div>
+
+              <div id="myModal3" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+
+                    <h2>Pay on Delivery:</h2>
+                  </div>
+                  <br><br><br><br>
+                  <h1>Estimated time of arrival:</h1>
+                  <br>
+                  <br><br>
+                  <h1>1-3 days</h1>
+                  <div class="modal-footer">
+                    <br><br>
+
+                        <button class="button " type="submit" name="submit"   id="subm" >Submit</button>
+
+
+                      <br>
+                        <span class="close2">
+                      <button class="button " type="button" id="myBtn" onclick="step3()">Previous</button>
+                      </div>
+                    </span>
+
+              </div>
+              </div>
+
+              <div id="myModal4" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2>Pay with Card:</h2>
+                  </div>
+                        <br><br> <h4>Card Option:</h4><br>
+                        <select name="card_option" value="0" required>
+                          <option  selected="selected">select your card</option>
+                            <option >Visa</option>
+                            <option >Mastercard</option>
+                            <option>American Express</option>
+                        </select> <br>
+                        <br><br> Code :<br>
+                        <input type="text" value="enter your code" id= "code" name="code" required>
+                        <br><br>Full Name:<br>
+                        <input type="text" value="enter your full name" id="fullname" name="fullname" required >
+                        <br><br> Expiration date:<br>
+                        <input type="date" value="2020-01-01" id="expDay" name="expire" required >
+                        <br><br>Verification code:<br>
+                        <input type="text" value="enter your verification code" id="ver" name="verif" required ><br><br>
+                        <br>
+                       <h6> Accept Terms<input type="checkbox" name="accept" id="terms"  ></h6>
+
+
+                        <br><br><br><br><br>
+                          <span class="close2">
+                            <button class="button " type="button" id="myBtn" onclick="step3()">Previous</button>
+                        </span>
+                        <span class="close">
+                          <button class="button " name="submit2" type="submit" id="subm2" >Submit</button>
+                          </span>
+
+
+                    </div>
+                </div>
+
+        </div>
+      </form>
+            <br><br>
+        <div class= "regrow">
+            <h1><img src="shoppingcart.png">Shopping Cart:</h1><br><br>
+            <div id="BoughtItemsContainer"> </div><br><br><br>
+                <h3 id="total" ></h3>
+                <br>
+            <br>
+            </div>
+
+    </div>
+
+
+    </div>
+
+    <div class="media">
+        follow us!
+        <a target="_blank" href="http://www.facebook.com/">
+            <img src="fb.png"  >
+          </a>
+          <a target="_blank" href="http://www.instagram.com/">
+            <img src="insta.png" >
+          </a>
+          <a target="_blank" href="http://www.twitter.com/">
+            <img src="twitter.png" >
+          </a>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Choco Mania</title>
+    <meta charset="UTF-8">
+    <script src="myscript.js"></script>
+    <link name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form action="phppage2.php" method="POST">
+    <div class="image ">
+    <div class="header ">
+        <div class="logo ">
+            <img src="logo.png  ">
+        </div>
+     <div class="rows " >
+        <div class="footer ">
+
+            <a href="reviews.html ">Reviews </a>
+    </div>
+
+    <div class="footer ">
+
+            <a href="page3.html ">Categories </a>
+    </div>
+    <div class="footer ">
+
+            <a href="page8.php " > My Orders </a>
+    </div>
+    <div class="footer">
+    <a href="logout.php ">Logout
+    </a>
+    </div>
+    </div>
+    </div>
+    <div class="bg">
+        <h1>Welcome<?php session_start();
+        include 'config.php';
+        echo "<br>";
+         echo $_SESSION["nickname"] . "!" ?></h1> <br> <br>
+    </div>
+    <div class="background ">
+        <br><br>
+
+        <br><br>
+        <h2><p>Karaoli k Dimitriou 80 •  Pireaus, 210-0000000<br><br><br>
+            We are a small family business that started a wholesale, handmade chocolate factory, mainly from chocolate, in February 2006.<br>
+            Our partnership with confectionery and bakery, gave us the need to create a retail space in our current headquarters, for two reasons.<br> First to taste our products and then  to see our customers,how we would like to exhibit and sell our sweets.<br><br>
+        </p></h2>
+        <br><br><br>        <br><br><br>
+
+    </div>
+    </div>
+    <div class="rights">
+
+        <div class="media">
+        follow us!
+        <a target="_blank" href="http://www.facebook.com/">
+            <img src="fb.png"  >
+          </a>
+          <a target="_blank" href="http://www.instagram.com/">
+            <img src="insta.png" >
+          </a>
+          <a target="_blank" href="http://www.twitter.com/">
+            <img src="twitter.png" >
+          </a>
+        </div>
+        <br><br>
+    </div>
+    </form>
+    </body>
+
+</html>
